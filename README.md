@@ -1,7 +1,6 @@
 A module for the [tree-sitter](https://tree-sitter.github.io/) incremental parsing system. The tree-sitter has both runtime and per-language dependencies. They all have to be build separately. For a purpose of this project per-language dependencies are part of the resulting `tree_sitter.xcframework`.
 
 The `tree_sitter.xcframework` binary comes with:
-- [tree-sitter](https://tree-sitter.github.io/tree-sitter) runtime
 - [tree-sitter-swift](https://github.com/alex-pinkus/tree-sitter-swift)
 - [tree-sitter-go](https://github.com/tree-sitter/tree-sitter-go)
 - [tree-sitter-gomod](https://github.com/camdencheek/tree-sitter-go-mod)

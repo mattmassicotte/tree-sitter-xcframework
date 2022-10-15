@@ -7,22 +7,22 @@ let package = Package(
     platforms: [.macOS(.v10_13), .iOS(.v11)],
     products: [
         .library(
-            name: "tree_sitter",
-            targets: ["tree_sitter", "tree_sitter_language_resources"]),
+            name: "TreeSitterParsers",
+            targets: ["TreeSitterParsers", "TreeSitterParserResources"]),
     ],
     dependencies: [],
     targets: [
         .binaryTarget(
-            name: "tree_sitter",
-            path: "tree_sitter.xcframework"
+            name: "TreeSitterParsers",
+            path: "TreeSitterParsers.xcframework.zip"
         ),
         .target(
-            name: "tree_sitter_language_resources",
-            dependencies: ["tree_sitter"],
+            name: "TreeSitterParserResources",
+            dependencies: ["TreeSitterParsers"],
             resources: [
-                .copy("LanguageResources")
+                .copy("ParserResources")
             ],
             linkerSettings: [.linkedLibrary("c++")]
-        )
+        ),
     ]
 )
